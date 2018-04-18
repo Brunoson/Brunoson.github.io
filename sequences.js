@@ -20,7 +20,7 @@ var colors = {
   "Autoroute": "#CD853F",
   "Hors réseau public": "#D3D3D3",
   "Inconnu": "#BBBBBB",
-  //"Parc de stationnement ouvert à la circulation publique": "#FFDAB9",
+  "Parc de stationnement ouvert à la circulation publique": "#FFDAB9",
   "Route Départementale": "#FFB6C1",
   "Route Nationale": "#FFE4C4",
   "Voie Communale": "#FF8C00",
@@ -255,7 +255,7 @@ function drawLegend() {
   g.append("svg:text")
       .attr("x", li.w / 2)
       .attr("y", li.h / 2)
-      .attr("dy", "0.35em")
+      .attr("dy", "0.25em")
       .attr("text-anchor", "middle")
       .text(function(d) { return d.key; });
 }
@@ -312,3 +312,4 @@ function buildHierarchy(csv) {
   }
   return root;
 };
+
