@@ -1,21 +1,37 @@
 // Dimensions of sunburst.
-var width = 750;
+var width = 950;
 var height = 600;
 var radius = Math.min(width, height) / 2;
 
 // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
 var b = {
-  w: 75, h: 30, s: 3, t: 10
+  w: 150, h: 30, s: 3, t: 10
 };
 
 // Mapping of step names to colors.
 var colors = {
-  "Année": "#5687d1",
-  "Catégorie": "#7b615c",
-  "Situation": "#de783b",
-  "Type de collision": "#6ab975",
-  "Gravité de l'accident": "#a173d1",
-  "end": "#bbbbbb"
+  "2010": "#00CED1",
+  "2011": "#79F8F8",
+  "2012": "#87CEFA",
+  "2013": "#AFEEEE",
+  "2014": "#7FFFD4",
+  "2015": "#87CEEB",
+  "2016": "#1E90FF",
+  "Autoroute": "#CD853F",
+  "Hors réseau public": "#D3D3D3",
+  "Inconnu": "#BBBBBB",
+  //"Parc de stationnement ouvert à la circulation publique": "#FFDAB9",
+  "Route Départementale": "#FFB6C1",
+  "Route Nationale": "#FFE4C4",
+  "Voie Communale": "#FF8C00",
+  "Sur chaussée": "#8B4513",
+  "2 véhicules par l'arrière": "#F0F",
+  "2 véhicules par le côté": "#800080",
+  "Autre collision": "#DC143C",
+  "Blessé hospitalisé": "#B22222",
+  "Blessé léger": "#00FF7F",
+  "Indemne": "#008000",
+  "Tué": "#FF0000",
 };
 
 // Total size of all segments; we set this later, after loading the data.
@@ -215,7 +231,7 @@ function drawLegend() {
 
   // Dimensions of legend item: width, height, spacing, radius of rounded rect.
   var li = {
-    w: 75, h: 30, s: 3, r: 3
+    w: 150, h: 30, s: 3, r: 3
   };
 
   var legend = d3.select("#legend").append("svg:svg")
